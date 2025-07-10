@@ -56,3 +56,21 @@ function disconnectUser() {
     
     // In real implementation, call hotspot API to disconnect
 }
+
+async function connectToWifi(phone, bundleId) {
+  try {
+    const res = await fetch('/api/hotspot/connect', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone, bundleId })
+    });
+    const data = await res.json();
+    
+    if (data.success) {
+      alert('You are now connected to WiFi!');
+      startSessionTimer(bundleId);
+    }
+  } catch (err) {
+    console.error('Connection error:', err);
+  }
+}

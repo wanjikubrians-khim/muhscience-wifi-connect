@@ -26,3 +26,10 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
     alert('Account created! Please login.');
     document.querySelector('[data-tab="login"]').click();
 });
+function checkAuth() {
+  const token = localStorage.getItem('token');
+  if (!token && !window.location.pathname.includes('auth.html')) {
+    window.location.href = 'auth.html';
+  }
+}
+checkAuth();
