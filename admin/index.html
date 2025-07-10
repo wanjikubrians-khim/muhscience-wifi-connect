@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Muhscience WiFi</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <!-- Same navbar, but add "Admin" link -->
+    </header>
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="bundles.html">Internet Bundles</a>
+                <a href="transactions.html">Transactions</a>
+                <a href="users.html">Users</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <h1>Admin Dashboard</h1>
+            
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Active Users</h3>
+                    <p>24</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Today's Revenue</h3>
+                    <p>KES 5,200</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p>1,248</p>
+                </div>
+            </div>
+            
+            <!-- Recent Transactions -->
+            <div class="card">
+                <h2>Recent Transactions</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User</th>
+                            <th>Plan</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>254712345678</td>
+                            <td>1 Day</td>
+                            <td>KES 350</td>
+                            <td><span class="status-success">Completed</span></td>
+                        </tr>
+                        <!-- More rows -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

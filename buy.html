@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Internet | Hunna WiFi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Same header as index.html -->
+    </header>
+
+    <main class="container">
+        <h1>Buy Internet Bundle</h1>
+        
+        <div class="purchase-flow">
+            <!-- Step 1: Select Bundle -->
+            <div class="step active" id="step1">
+                <h2>Choose Your Bundle</h2>
+                <div class="bundle-options" id="bundleOptions">
+                    <!-- Loaded via JS -->
+                </div>
+            </div>
+            
+            <!-- Step 2: Enter Phone (hidden initially) -->
+            <div class="step" id="step2">
+                <h2>Enter Your M-Pesa Number</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="e.g. 254712345678" required>
+                    </div>
+                    <button type="submit" class="btn btn-mpesa">Pay Now via M-Pesa</button>
+                </form>
+            </div>
+            
+            <!-- Step 3: Payment Processing (hidden) -->
+            <div class="step processing" id="step3">
+                <h2>Processing Your Payment</h2>
+                <div class="loader"></div>
+                <p>Check your phone to complete M-Pesa payment</p>
+            </div>
+            
+            <!-- Step 4: Success (hidden) -->
+            <div class="step success" id="step4">
+                <h2>Payment Successful!</h2>
+                <p>You're now connected to Hunna WiFi</p>
+                <div class="wifi-details">
+                    <p><strong>Duration:</strong> <span id="bundleDuration">1 Hour</span></p>
+                    <p><strong>Expires at:</strong> <span id="expiryTime">12:45 PM</span></p>
+                </div>
+                <a href="/" class="btn">Done</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/mpesa.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
